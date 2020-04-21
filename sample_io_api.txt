@@ -1,0 +1,135 @@
+File : insert_UserDetail  Method : POST
+    Input API :
+        {
+	        "user_name" : "Raj",
+	        "user_email" : "udmnxpdu@hotmail.com",
+	        "user_pass" : "12345678",
+	        "user_mobile" : "9688172987"
+        }
+    Output API :
+        {
+            "status": 1,
+            "message": "user insert successfully"
+        }
+
+File : login_api.php  Method : POST
+    Input API :
+        {
+	        "user_email" : "udmnxpdu@hotmail.com",
+	        "user_pass" : "12345678"
+        }
+    Output API :
+        {
+            "status": 1,
+            "jwt": "eyJ0eXAiOiJKV1QiLCJhipbUdb2qj2fxBKljLcfh9yOIFuY5YPJJ8if97QhJQkYigQLW06M2ikYqApoXVXVVADd9nP0nv3AsLK2YQ",
+            "message": "login successfully"
+        }
+
+File : update_UserDetail.php  Method : POST
+    Input API :
+        {
+	        "user_name" : "Raj",
+	        "user_email" : "udmnxpdu@hotmail.com",
+	        "user_pass" : "udmnxpdu",
+	        "user_mobile" : "9688172987"
+        }
+    Output API :
+        {
+            "status": 1,
+            "message": "user updated successfully"
+        }
+
+File : insert_MessageDetail.php  Method : POST
+    Input API :
+        {
+	        "message_code" : "101",
+	        "message_title" : "ramukjar",
+	        "message_content" : "content",
+	        "message_link" : "https://udmnxpdu.tk"
+        }
+    Output API :
+        {
+            "status": 1,
+            "message": "message inserted successfully"
+        }
+
+File : insert_VerifiedDetail.php  Method : POST
+    Input API :
+        {
+	        "message_id" : 6,
+	        "is_verified" : 1
+        }
+    Output API :
+        {
+            "status": 1,
+            "message": "message verified successfully"
+        }
+
+File : view_UserDetail.php  Method : GET
+    Output API :
+        {
+            "status": 1,
+            "message": "success",
+            "data": [
+                {
+                    "user_id": 5,
+                    "user_email": "udmnxpdu@hotmail.com",
+                    "user_name": "Raj",
+                    "user_pass": "$2y$10$O5t3VfNt5BYodtSPlRqZ..8G9Fi79mOFu1J.YIiSjnxPQ8BL21KBi",
+                    "user_mobile": "9688172987"
+                },
+                {
+                    "user_id": 6,
+                    "user_email": "udmnxpdu@yahoo.com",
+                    "user_name": "Rajkumar",
+                    "user_pass": "$2y$10$wnsNQsTOYfOaghNCnh4sBuqWBTKlpyxtiHIGSXhliRuNLEddnly2q",
+                    "user_mobile": "9688182988"
+                }
+            ]
+        }
+
+File : view_MessageDetail.php  Method : GET
+    Output API :
+        {
+            "status": 1,
+            "message": "success",
+            "data": [
+                {
+                    "message_id": 1,
+                    "message_code": "108",
+                    "message_time": "2020-04-13",
+                    "message_title": "rajkumar",
+                    "message_content": "udmnxpdu",
+                    "message_link": "https://udmnxpdu.tk"
+                },
+                {
+                    "message_id": 4,
+                    "message_code": "104",
+                    "message_time": "2020-04-13",
+                    "message_title": "ramukjar",
+                    "message_content": "content",
+                    "message_link": "https://udmnxpdu.tk"
+                }
+            ]
+        }
+
+File : view_VerifiedDetail.php  Method : GET
+    Output API :
+        {
+            "status": 1,
+            "message": "success",
+            "data": [
+                {
+                    "verification_id": 4,
+                    "message_id": 4,
+                    "is_verified": 1,
+                    "verified_by": 5
+                },
+                {
+                    "verification_id": 5,
+                    "message_id": 4,
+                    "is_verified": 1,
+                    "verified_by": 5
+                }
+            ]
+        }
